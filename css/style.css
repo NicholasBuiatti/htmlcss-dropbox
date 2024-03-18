@@ -5,9 +5,44 @@
     padding: 0;
 }
 
+.container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    padding: 5% 2%;
+    color: black;
+}
+
+button {
+    padding: 1% 4%;
+}
+
 /************* DEBUG *************/
 
 /************* IMPOSTAZIONI SPECIFICHE *************/
+
+header {
+    background-color: green;
+    width: 100%;
+    position: fixed;
+    padding: 3vh 1vw;
+}
+
+.header-left {
+    background-color: red;
+    flex: 1 0 auto;
+}
+
+.header-right {
+    background-color: blue;
+    flex: 1 0 auto;
+    text-align: end;
+}
 
 /************* HEADER *************/
 
