@@ -189,4 +189,38 @@ h4 {
     padding: 10vh 25vw;
 }
 /************* SECTION 6 *************/
+.sixth-section {
+    background-color: green;
+    margin-top: 5rem;
+    padding: 10vh 25vw;
+}
+
+.question:hover .answer {
+    display: block;
+    background-color: white;
+}
+
+.answer {
+    display: none;
+}
+
 /************* FOOTER *************/
+footer {
+    background-color: black;
+    height: 20rem;
+    padding: 10vh 20vw 5vh 20vw;
+}
+.end-page {
+    align-items: flex-start;
+}
+
+.column-end {
+    border: 2px solid white;
+}
+
+#slc-lenguage {
+    margin: 3rem 0;
+    padding-top: 2rem ;
+    border-top: 1px solid white;
+    display: inline-block;
+}
