@@ -24,8 +24,17 @@ button {
     color: white;
     border-radius: 20px;
 }
+
 button > a {
     color: white;
+}
+
+.margin-top {
+    margin-top: 2rem;
+}
+
+.color-gray {
+    color: gray;
 }
 
 /************* DEBUG *************/
@@ -75,16 +84,14 @@ header {
     margin-bottom: 2rem;
 }
 
-.first-part > .container-row {
-}
-
 .column-left > button {
     margin: 1rem 0;
+    width: 61%;
 }
 
 .column-right {
     background-color: blue;
-    flex: 1 0 60%;
+    flex: 1 0 50%;
 }
 
 .first-part > .container-row {
@@ -105,9 +112,13 @@ header {
 /************* SECTION 2 *************/
 
 .second-part {
-    background-color: green;
+    /* background-color: green; */
     margin-top: 5rem;
     padding: 10vh 25vw ;
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 .slc-plane {
@@ -118,9 +129,9 @@ header {
     margin-left: 2rem;
 } */
 
-.second-part > .container-row {
+/* .second-part > .container-row {
     background-color: red;
-}
+} */
 
 /************* PARTE FLEX SECTION 2 *************/
 .business {
@@ -128,30 +139,50 @@ header {
     flex-wrap: wrap;
 }
 
-.business-plan-single{
-    width: calc(100% / 3 - 0.5rem);
-    border: 2px solid gray;
-}
-
-.business-plan-team{
-    width: calc(100% / 3 - 0.5rem);
-    border: 2px solid gray;
-}
-
-.business-plan-agency{
+.business > div {
     width: calc(100% / 3 - 0.5rem);
     border: 2px solid gray;
 }
 
 .business-plan-team-agency {
-    border: 2px solid gray;
     flex: 1 1 100%;
-    margin-top: 2rem;
 }
 
-h4 {
+.business-plan-single > p,
+.business-plan-team > p,
+.business-plan-agency > p {
     border: 2px solid gray;
     text-align: center;
+}
+
+.second-part p {
+    font-size: 0.8rem;
+}
+
+.business h3 {
+    font-size: 1.3rem;
+}
+
+.business i {
+    margin: 0 0.5rem;
+}
+
+.single-bss-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.border-bottom {
+    border-bottom: 1px solid grey;
+    padding: 2rem 0rem;  
+}
+
+.buy {
+    text-decoration: underline;
+    color: blue;
 }
 
 /************* SECTION 3 *************/
