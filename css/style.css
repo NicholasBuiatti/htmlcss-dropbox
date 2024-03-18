@@ -23,6 +23,9 @@ button {
 }
 
 /************* DEBUG *************/
+section {
+    height: 50rem;
+}
 
 /************* IMPOSTAZIONI SPECIFICHE *************/
 /************* HEADER *************/
@@ -121,11 +124,11 @@ header {
 
 .business-plan-team-agency {
     border: 2px solid gray;
-    flex: 0 1 100%;
+    flex: 1 1 100%;
     margin-top: 2rem;
 }
 
-h3 {
+h4 {
     border: 2px solid gray;
     text-align: center;
 }
@@ -141,4 +144,49 @@ h3 {
     flex-direction: row-reverse;
 }
 /************* SECTION 4 *************/
+.fourth-part {
+    background-color: green;
+    margin-top: 5rem;
+    padding: 10vh 25vw;
+}
+
+.advice {
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.advice > div {
+    margin-top: 1rem;
+}
+
+/************* SECTION 5 *************/
+.fifth-section {
+    background-color: orange;
+    margin-top: 5rem;
+}
+
+.fifth-section > .container-row {
+    align-items: flex-start;
+}
+
+.column-left-company,
+.column-right-company{
+    flex-wrap: wrap;
+    background-color: red;
+    width: calc(100% / 3);
+}
+.immagine {
+    width: 50%;
+    height: 200px;
+}
+.column-center-company {
+    background-color: blue;
+    flex: 0 1 calc(100% / 3);
+}
+
+.fifth-section > div:last-child {
+    background-color: lightblue;
+    padding: 10vh 25vw;
+}
+/************* SECTION 6 *************/
 /************* FOOTER *************/
