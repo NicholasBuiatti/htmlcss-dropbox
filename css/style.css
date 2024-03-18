@@ -80,6 +80,65 @@ header {
 
 /************* SECTION 2 *************/
 
+.second-part {
+    background-color: green;
+    margin-top: 5rem;
+    padding: 10vh 25vw ;
+}
+
+.slc-plane {
+    margin: 2rem 0;
+}
+
+/* [name="slc-plane-a"] {
+    margin-left: 2rem;
+} */
+
+.second-part > .container-row {
+    background-color: red;
+}
+
+/************* PARTE FLEX SECTION 2 *************/
+.business {
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.business-plan-single{
+    width: calc(100% / 3 - 0.5rem);
+    border: 2px solid gray;
+}
+
+.business-plan-team{
+    width: calc(100% / 3 - 0.5rem);
+    border: 2px solid gray;
+}
+
+.business-plan-agency{
+    width: calc(100% / 3 - 0.5rem);
+    border: 2px solid gray;
+}
+
+.business-plan-team-agency {
+    border: 2px solid gray;
+    flex: 0 1 100%;
+    margin-top: 2rem;
+}
+
+h3 {
+    border: 2px solid gray;
+    text-align: center;
+}
+
 /************* SECTION 3 *************/
+.third-part {
+    background-color: purple;
+    margin-top: 5rem;
+    padding: 10vh 25vw;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
 /************* SECTION 4 *************/
 /************* FOOTER *************/
