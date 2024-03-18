@@ -15,11 +15,17 @@
 a {
     text-decoration: none;
     padding: 5% 2%;
-    color: black;
+    color: rgba(133,133,133,255);
 }
-
 button {
-    padding: 1% 4%;
+    background-color: rgba(0,97,255,255);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 20px;
+}
+button > a {
+    color: white;
 }
 
 /************* DEBUG *************/
@@ -30,42 +36,50 @@ section {
 /************* IMPOSTAZIONI SPECIFICHE *************/
 /************* HEADER *************/
 header {
-    background-color: green;
+    background-color: white;
     width: 100%;
     position: fixed;
     padding: 3vh 1vw;
 }
 
 .nav-header-left {
-    background-color: red;
     flex: 1 0 auto;
 }
 
 .nav-header-right {
-    background-color: blue;
     flex: 1 0 auto;
     text-align: end;
 }
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.fa-dropbox {
+    color: rgba(0,97,255,255);
+}
+
 /************* MAIN *************/
 /************* SECTION 1 *************/
 
 .first-part {
     height: 100vh;
-    background-color: lightblue;
+    background-color: rgba(180,208,231,255);
     padding: 20vh 20vw 0 20vw;
 }
 
 .first-part > h1 {
-    background-color: red;
+    font-size: 4rem;
+    margin-bottom: 2rem;
 }
 
 .first-part > .container-row {
-    height: ;
-    background-color: green;
 }
 
-.column-left {
-    background-color: brown;
+.column-left > button {
+    margin: 1rem 0;
 }
 
 .column-right {
@@ -79,6 +93,13 @@ header {
 
 .delete {
     display: block;
+    color: black;
+    margin-bottom: 3rem;
+}
+
+.fa-arrow-down {
+    font-size: 2rem;
+    margin: 1rem;
 }
 
 /************* SECTION 2 *************/
