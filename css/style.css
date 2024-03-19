@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Sharp Grotesk 23","Sharp Grotesk 23 KR","Sharp Grotesk 23 Thai","Helvetica","Arial";
 }
 
 .container-row {
@@ -14,18 +15,15 @@
 
 a {
     text-decoration: none;
-    padding: 5% 2%;
+    padding: 0.8rem 1rem 0.8rem 0;
     color: rgba(133,133,133,255);
 }
-button {
-    background-color: rgba(0,97,255,255);
-    border: none;
-    padding: 0.5rem 1rem;
-    color: white;
-}
 
-button > a {
+.button {
+    background-color: rgba(0,97,255,255);
     color: white;
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
 }
 
 .margin-top {
@@ -70,6 +68,11 @@ header {
     color: rgba(0,97,255,255);
 }
 
+.nav-header-right > .button {
+    margin-top: 0;
+    padding: 0.5rem 1rem;
+}
+
 /************* MAIN *************/
 /************* SECTION 1 *************/
 
@@ -84,11 +87,6 @@ header {
     margin-bottom: 2rem;
 }
 
-.column-left > button {
-    margin: 1rem 0;
-    width: 61%;
-}
-
 .column-right {
     background-color: blue;
     flex: 1 0 50%;
@@ -96,6 +94,11 @@ header {
 
 .first-part > .container-row {
     align-items: start;
+}
+
+.button, 
+.delete {
+    margin-top: 2rem;
 }
 
 .delete {
@@ -125,14 +128,6 @@ h2 {
     margin: 2rem 0;
 }
 
-/* [name="slc-plane-a"] {
-    margin-left: 2rem;
-} */
-
-/* .second-part > .container-row {
-    background-color: red;
-} */
-
 /************* PARTE FLEX SECTION 2 *************/
 .business {
     align-items: flex-start;
@@ -143,8 +138,6 @@ h2 {
     width: calc(100% / 3 - 0.5rem);
     border: 2px solid gray;
 }
-
-
 
 .business-plan-team-agency {
     border: 2px solid gray;
@@ -169,6 +162,10 @@ h2 {
 
 .business i {
     margin: 0 0.5rem;
+}
+
+.button > p {
+    text-align: center;
 }
 
 .bss-description {
@@ -206,10 +203,11 @@ h2 {
     position: relative;
 }
 
-.business-plan-team-agency > button {
+.business-plan-team-agency > .button {
     position: absolute;
     right: 1rem;
     top: 3rem;
+    margin-top: 0;
 }
 
 /************* SECTION 3 *************/
@@ -230,10 +228,11 @@ h2 {
     padding-left: 1rem;
 }
 
-.reverse button {
+.reverse .button {
     background-color: white;
     border: 1px solid black;
     width: 50%;
+    text-align: center;
 }
 
 .reverse a {
@@ -288,38 +287,78 @@ h2 {
 }
 
 .column-left-company,
-.column-right-company{
+.column-right-company,
+.column-center-company {
     flex-wrap: wrap;
     background-color: red;
     width: calc(100% / 3);
+    height: 50vh;
 }
 .immagine {
     width: 50%;
-    height: 200px;
 }
-.column-center-company {
-    background-color: blue;
-    flex: 0 1 calc(100% / 3);
+
+.column-center-company > p {
+    margin-top: 2rem;
 }
 
 .fifth-section > div:last-child {
     background-color: lightblue;
-    padding: 10vh 25vw;
+    padding: 15vh 25vw;
+}
+
+.fifth-section h1 {
+    width: 50%;
+    font-size: 2rem;
+}
+
+.button-bianco {
+    background-color: white;
+    margin-top: 0;
+    color: black;
+    text-align: center;
+    font-size: 0.9rem;
 }
 /************* SECTION 6 *************/
 .sixth-section {
-    background-color: green;
     margin-top: 5rem;
-    padding: 10vh 25vw;
+    padding: 5vh 25vw 10vh 25vw;
+}
+
+.quest > h1 {
+    padding-bottom: 3rem;
+}
+
+.question {
+    padding: 1.5rem 0;
+    border-top: 1px solid grey;
+    position: relative;
+}
+
+.fa-caret-down {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.question:hover .fa-caret-down {
+    top: 25%;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg)
 }
 
 .question:hover .answer {
     display: block;
-    background-color: white;
 }
 
 .answer {
     display: none;
+    padding: 1.5rem 1rem;
+}
+
+.question:last-child {
+    border-bottom: 1px solid grey;
 }
 
 /************* FOOTER *************/
