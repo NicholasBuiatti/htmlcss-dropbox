@@ -22,7 +22,6 @@ button {
     border: none;
     padding: 0.5rem 1rem;
     color: white;
-    border-radius: 20px;
 }
 
 button > a {
@@ -38,9 +37,9 @@ button > a {
 }
 
 /************* DEBUG *************/
-section {
+/* section {
     height: 50rem;
-}
+} */
 
 /************* IMPOSTAZIONI SPECIFICHE *************/
 /************* HEADER *************/
@@ -49,6 +48,7 @@ header {
     width: 100%;
     position: fixed;
     padding: 3vh 1vw;
+    z-index: 1;
 }
 
 .nav-header-left {
@@ -144,19 +144,23 @@ h2 {
     border: 2px solid gray;
 }
 
+
+
 .business-plan-team-agency {
-    flex: 1 1 100%;
+    border: 2px solid gray;
 }
 
 .business-plan-single > p,
 .business-plan-team > p,
-.business-plan-agency > p {
-    border: 2px solid gray;
+.business-plan-agency > p,
+.business-plan-team-agency > p {
+    border: 1px solid gray;
     text-align: center;
+    padding: 0.5rem 0;
 }
 
 .second-part p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .business h3 {
@@ -167,37 +171,76 @@ h2 {
     margin: 0 0.5rem;
 }
 
-.single-bss-description {
+.bss-description {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 1rem;
     padding: 1rem;
 }
 
+.bss-description > p {
+    display: flex;
+    align-items: flex-start;
+}
+
 .border-bottom {
     border-bottom: 1px solid grey;
-    padding: 2rem 0rem;  
+    padding: 2rem 0;  
 }
 
 .buy {
     text-decoration: underline;
     color: blue;
+    padding: 2rem 0.5rem;
+}
+
+.fa-check {
+    color: blue;
+}
+
+.business-plan-team-agency > .bss-description {
+    width: 70%;   
+}
+
+.business-plan-team-agency {
+    position: relative;
+}
+
+.business-plan-team-agency > button {
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
 }
 
 /************* SECTION 3 *************/
 .third-part {
-    background-color: purple;
     margin-top: 5rem;
     padding: 10vh 25vw;
+}
+
+.third-part p {
+    margin: 1rem 0;
 }
 
 .reverse {
     flex-direction: row-reverse;
 }
+
+.reverse > .column-left {
+    padding-left: 1rem;
+}
+
+.reverse button {
+    background-color: white;
+    border: 1px solid black;
+    width: 50%;
+}
+
+.reverse a {
+    color: black;
+}
 /************* SECTION 4 *************/
 .fourth-part {
-    background-color: green;
     margin-top: 5rem;
     padding: 10vh 25vw;
 }
@@ -205,10 +248,33 @@ h2 {
 .advice {
     flex-wrap: wrap;
     align-items: flex-start;
+    margin-bottom: 5rem;
+}
+
+.advice p {
+    margin-top: 1rem;
 }
 
 .advice > div {
     margin-top: 1rem;
+}
+
+.info {
+    width: calc(100% / 3 - 1rem);
+}
+
+.info > img {
+    width: 100%;
+}
+
+.fourth-part h1 {
+    margin-bottom: 3rem;
+}
+
+.fourth-part a {
+    text-decoration: underline;
+    color: blue;
+    padding-left: 0;
 }
 
 /************* SECTION 5 *************/
