@@ -9,8 +9,8 @@
 :root {
     --altezzaMin-Max: clamp(300px, 100vh, 2500px);
     --larghezzaMin-Max: clamp(430px, 100%, 2000px);
-    --paddingBoxLaterali: clamp(50px, 20vw, 1000px);
-    --paddingBoxSopraSotto: clamp(25px, 10vh, 200px);
+    --paddingBoxato: 10% 15% 10% 15%;
+    --paddingBoxato2: 10% 25% 10% 25%;
 }
     
 .container-row {
@@ -21,11 +21,13 @@
 }
 
 h1{
-    font-size: clamp(20px, 8vh, 100px);
+    font-size: clamp(20px, 7vh, 100px);
+    margin-bottom: 1em;
 }
 
 h2 {
     font-size: clamp(15px, 4.5vh, 60px);
+    margin-bottom: 1em;
 }
 
 h3 {
@@ -36,10 +38,10 @@ p {
     font-size: clamp(10px, 2vh, 60px);
 }
 
+
 a {
     font-size: clamp(10px, 2vh, 60px);
     text-decoration: none;
-    padding: 1.5em 0.5em;
     color: rgba(133,133,133,255);
 }
 
@@ -51,13 +53,18 @@ a {
     font-size: clamp(10px, 2vh, 60px);
 }
 
-.margin-top {
+.button > a {
+    text-align: center;
+    padding: 1.5em 0.5em;
+}
+
+/* .margin-top {
     margin-top: 2rem;
 }
 
 .color-gray {
     color: gray;
-}
+} */
 
 /************* DEBUG *************/
 /************* IMPOSTAZIONI SPECIFICHE *************/
@@ -67,7 +74,7 @@ header {
     width: var(--larghezzaMin-Max);
     position: fixed;
     padding: 0.8em 0.5em;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header-flex {
@@ -80,8 +87,8 @@ header {
 
 .logo {
     font-weight: 700;
-    font-size: clamp(15px, 3vh, 100px);
     color: black;
+    font-size: clamp(15px, 3vh, 100px);
     padding: 1em 0.5em;
 }
 
@@ -89,24 +96,23 @@ header {
     color: rgba(0,97,255,255);
 }
 
-.nav-header-right > .button {
-    margin-top: 0;
-    padding: 0.5rem 1rem;
+nav > a {
+    padding: 1.5em 0.5em;
 }
 
 /************* MAIN *************/
 /************* SECTION 1 *************/
 
 .first-part {
-    height: var(--altezzaMin-Max);
     width: var(--larghezzaMin-Max);
     background-color: rgba(180,208,231,255);
-    padding: calc(var(--paddingBoxSopraSotto) + 10vh) var(--paddingBoxLaterali) 0 var(--paddingBoxLaterali);
+    padding: var(--paddingBoxato);
+    padding-bottom: 0;
 }
 
-/* .first-part > h1 {
-    margin-bottom: 5%;
-} */
+.first-part p {
+    margin-bottom: 2em;
+}
 
 .column-right {
     flex: 1 0 70%;
@@ -114,17 +120,14 @@ header {
 
 .first-part > .container-row {
     align-items: start;
-}
-
-.button, 
-.delete {
-    margin-top: 10%;
+    position: relative;
 }
 
 .delete {
     display: block;
     color: black;
     margin-bottom: 15%;
+    margin-top: 10%;
     padding-left: 0;
 }
 
@@ -133,8 +136,9 @@ header {
     margin: 5%;
 }
 
-.column-right > img {
-    width: clamp(550px, 130%, 1000px)
+.first-part img {
+    width: clamp(550px, 70%, 1000px);
+    position: absolute;
 }
 
 .fa-arrow-down {
@@ -145,11 +149,11 @@ header {
 
 .second-part {
     width: var(--larghezzaMin-Max);
-    padding: calc(var(--paddingBoxSopraSotto) + 5vh) calc(var(--paddingBoxLaterali) + 5vw) ;
+    padding: var(--paddingBoxato2);
 }
 
 .slc-plane {
-    margin: 2rem 0;
+    margin: 1em 0;
 }
 
 [for="html"] {
@@ -165,6 +169,7 @@ header {
 .business {
     align-items: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 2em;
 }
 
 .business > div {
@@ -182,7 +187,7 @@ header {
 .business-plan-team-agency > p {
     border-bottom: 1px solid gray;
     text-align: center;
-    padding: 0.5rem 0;
+    padding: 0.5em 0;
 }
 
 .business-plan-team-agency i,
@@ -244,7 +249,9 @@ header {
 /************* SECTION 3 *************/
 .third-part {
     width: var(--larghezzaMin-Max);
-    padding: var(--paddingBoxSopraSotto) calc(var(--paddingBoxLaterali) + 5vw);
+    padding: var(--paddingBoxato2);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .third-part p {
@@ -273,10 +280,11 @@ header {
 .reverse a {
     color: black;
 }
+
 /************* SECTION 4 *************/
 .fourth-part {
     width: var(--larghezzaMin-Max);
-    padding: var(--paddingBoxSopraSotto) calc(var(--paddingBoxLaterali) + 5vw);
+    padding: var(--paddingBoxato2);
 }
 
 .advice {
@@ -298,10 +306,6 @@ header {
     width: 100%;
 }
 
-/* .fourth-part h1 {
-    margin-bottom: 3rem;
-} */
-
 .fourth-part a {
     text-decoration: underline;
     color: blue;
@@ -311,7 +315,6 @@ header {
 /************* SECTION 5 *************/
 .fifth-part {
     width: var(--larghezzaMin-Max);
-    margin-top: 5rem;
     background-color: rgba(245,245,245,255);
 }
 
@@ -363,13 +366,15 @@ header {
 
 .fifth-part > div:last-child {
     background-color: rgba(180,208,231,255);
-    padding: 15vh 25vw;
+    padding: var(--paddingBoxato2);
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
-/* .fifth-part h1 {
+.fifth-part h1 {
     width: 50%;
     font-size: 2rem;
-} */
+}
 
 .button-bianco {
     background-color: white;
@@ -380,14 +385,9 @@ header {
 }
 /************* SECTION 6 *************/
 .sixth-section {
-    margin-top: 5em;
     width: var(--larghezzaMin-Max);
-    padding: var(--paddingBoxSopraSotto) calc(var(--paddingBoxLaterali) + 5vw);
+    padding: var(--paddingBoxato2);
 }
-
-/* .quest > h1 {
-    padding-bottom: 1em;
-} */
 
 .question {
     padding: 1.5em 0;
@@ -424,8 +424,11 @@ header {
 /************* FOOTER *************/
 footer {
     background-color: black;
-    padding: var(--paddingBoxSopraSotto) var(--paddingBoxLaterali) calc(var(--paddingBoxSopraSotto) - 5vw) var(--paddingBoxLaterali);
+    padding: var(--paddingBoxato);
+    padding-bottom: 0;
 }
+
+
 
 .end-page {
     align-items: flex-start;
@@ -525,10 +528,3 @@ header a:hover {
     z-index: 1;
 }
 
-h1 {
-    padding-bottom: 1em;
-}
-
-h2 {
-    padding-bottom: 1em;
-}
