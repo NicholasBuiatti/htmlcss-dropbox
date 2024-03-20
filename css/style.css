@@ -7,7 +7,7 @@
 }
 
 :root {
-    --altezzaMin-Max: clamp(500px, 100vh, 2500px);
+    --altezzaMin-Max: clamp(300px, 100vh, 2500px);
     --larghezzaMin-Max: clamp(430px, 100%, 2000px);
     --paddingBoxLaterali: clamp(50px, 20vw, 1000px);
     --paddingBoxSopraSotto: clamp(25px, 10vh, 200px);
@@ -39,7 +39,7 @@ p {
 a {
     font-size: clamp(10px, 2vh, 60px);
     text-decoration: none;
-    padding: 2% 5%;
+    padding: 1.5em 0.5em;
     color: rgba(133,133,133,255);
 }
 
@@ -47,7 +47,7 @@ a {
     background-color: rgba(0,97,255,255);
     color: white;
     display: inline-block;
-    padding: 3% 5%;
+    padding: 0.5em;
     font-size: clamp(10px, 2vh, 60px);
 }
 
@@ -66,8 +66,12 @@ header {
     background-color: white;
     width: var(--larghezzaMin-Max);
     position: fixed;
-    padding: 3vh 1vw;
+    padding: 0.8em 0.5em;
     z-index: 1;
+}
+
+.header-flex {
+    align-items: flex-start;
 }
 
 .nav-header-left {
@@ -81,8 +85,9 @@ header {
 
 .logo {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: clamp(15px, 3vh, 100px);
     color: black;
+    padding: 1em 0.5em;
 }
 
 .fa-dropbox {
@@ -92,6 +97,16 @@ header {
 .nav-header-right > .button {
     margin-top: 0;
     padding: 0.5rem 1rem;
+}
+
+header a:hover {
+    border-bottom: 2px solid black;
+    color: black;
+} 
+
+.logo:hover,
+.nav-header-right:hover .button {
+    border-bottom: none;
 }
 
 /************* MAIN *************/
@@ -134,7 +149,7 @@ header {
 }
 
 .column-right > img {
-    width: 130%;
+    width: clamp(550px, 130%, 1000px)
 }
 
 .fa-arrow-down {
@@ -161,7 +176,7 @@ header {
     font-size: clamp(10px, 2vh, 60px);
 }
 
-/************* PARTE FLEX SECTION 2 *************/
+/************* PARTE INTERNA SECTION 2 *************/
 .business {
     align-items: flex-start;
     flex-wrap: wrap;
@@ -170,7 +185,6 @@ header {
 .business > div {
     width: calc(100% / 3 - 0.5rem);
     border: 1px solid gray;
-    min-height: 130vh;
 }
 
 .business-plan-team-agency {
@@ -187,7 +201,7 @@ header {
 }
 
 .business i {
-    margin: 0 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .button > p {
@@ -199,6 +213,10 @@ header {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+}
+
+.prima-parte {
+    margin-bottom: 2rem;
 }
 
 .bss-description > p {
@@ -281,10 +299,7 @@ header {
     margin: 5rem 0;
 }
 
-.advice p {
-    margin-top: 1rem;
-}
-
+.advice p,
 .advice > div {
     margin-top: 1rem;
 }
@@ -479,4 +494,23 @@ footer {
 
 .sfondo-azzurro{
     background-color: lightblue;
+}
+
+.button:hover {
+    color: black;
+    box-shadow: 7px 6px 14px 0px #000000;
+}
+
+.business-plan-single,
+.business-plan-team,
+.business-plan-agency,
+.business-plan-team-agency {
+    box-shadow: 7px 6px 14px 0px #000000;
+}
+
+.business-plan-single:hover,
+.business-plan-team:hover,
+.business-plan-agency:hover,
+.business-plan-team-agency:hover {
+    background-color: rgba(180,208,231,255);
 }
