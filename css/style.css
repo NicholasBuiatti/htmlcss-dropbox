@@ -58,14 +58,6 @@ a {
     padding: 1.5em 0.5em;
 }
 
-/* .margin-top {
-    margin-top: 2rem;
-}
-
-.color-gray {
-    color: gray;
-} */
-
 /************* DEBUG *************/
 /************* IMPOSTAZIONI SPECIFICHE *************/
 /************* HEADER *************/
@@ -524,7 +516,39 @@ header a:hover {
 
 .pubblicità:hover {
     box-shadow: inset 0px 0px 50px 15px black;
-    scale: 1.2;
     z-index: 1;
 }
 
+.relative {
+    position: relative;
+}
+
+.pubblicità-Chanel {
+    position: absolute;
+    top: 0;
+    left: 200%;
+    display: none;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
+}
+
+.sfondo-oro:hover .pubblicità-Chanel {
+    animation: translate;
+    animation-duration: 2s;
+    display: block;
+    animation-fill-mode:forwards;
+}
+
+@keyframes translate {
+    90% {
+        width: 200%;
+        height: 200%;
+        background-color: gold;
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        background-color: gold;
+    }
+}
